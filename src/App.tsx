@@ -1,8 +1,7 @@
-function App (){
+import React from 'react'
 
-  return (
-    <div>OUAICH</div>
-  )
+const App = () => {
+    return <div>OUAICH</div>
 }
 
 export default App
