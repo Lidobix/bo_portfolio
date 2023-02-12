@@ -12,6 +12,14 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "settings": {
+        "import/resolver": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"],
+            "moduleDirectory": ["src", "node_modules"]
+        }
+      },
     "plugins": ["react", "@typescript-eslint"],
-    "rules": {}
+    "rules": {  "import/extensions": [ "error", "ignorePackages", { "": "never" } ],
+        "react/jsx-filename-extension": [1, { "extensions": [".ts",".js",".tsx", ".ts"] }]
+    }
 }

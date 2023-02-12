@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
-const App = () => {
-    return <div>OUAICH</div>
+function App() {
+  useEffect(() => {
+    console.log('coucou');
+  }, []);
+
+  return (
+    <div>
+      <div>PORTFOLIO</div>
+      <div>OUAICH</div>
+      <div>OUAICH</div>
+      <div>OUAICH</div>
+    </div>
+  );
 }
 
-export default App
+export default App;
