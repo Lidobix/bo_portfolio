@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    console.log(process.env.REACT_APP_ESSAI);
     fetch(
       `${process.env.REACT_APP_SERVER_URL}${process.env.REACT_APP_SERVER_PORT}`
     )
