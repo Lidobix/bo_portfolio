@@ -2,13 +2,16 @@ import React, { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    console.log('coucou');
+    fetch('http://localhost:9090/')
+      .then((r) => {})
+      .catch((reason) => {
+        console.error(reason);
+      });
   }, []);
 
   return (
     <div>
       <div>PORTFOLIO</div>
-      <div>OUAICH</div>
       <div>OUAICH</div>
       <div>OUAICH</div>
     </div>

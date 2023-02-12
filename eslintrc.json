@@ -19,7 +19,17 @@
         }
       },
     "plugins": ["react", "@typescript-eslint"],
-    "rules": {  "import/extensions": [ "error", "ignorePackages", { "": "never" } ],
-        "react/jsx-filename-extension": [1, { "extensions": [".ts",".js",".tsx", ".ts"] }]
+    "rules": { 
+        "import/extensions": [ "error", "ignorePackages", { "": "never" } ],
+
+        "react/jsx-filename-extension": [1
+        , { "extensions": [".ts",".js",".tsx", ".ts"] }],
+        "import/resolver": {
+            "node": {
+              "extensions": [".ts", ".tsx", ".native.js"]
+            }
+          },
+
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}]
     }
 }
