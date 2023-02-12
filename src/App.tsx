@@ -2,8 +2,16 @@ import React, { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    fetch('http://localhost:9090/')
-      .then((r) => {})
+    console.log(process.env.REACT_APP_ESSAI);
+    fetch(
+      `${process.env.REACT_APP_SERVER_URL}${process.env.REACT_APP_SERVER_PORT}`
+    )
+      .then((r) => {
+        return r.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
       .catch((reason) => {
         console.error(reason);
       });
